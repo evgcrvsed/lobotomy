@@ -9,7 +9,7 @@ app.mount("/profile",
           StaticFiles(directory="static", html=True),
           name="profile")
 
-# Автоматическое перенаправление с / на /profile
+# Автоматическое перенаправение с / на /profile
 @app.get("/")
 async def root():
     return RedirectResponse(url="/profile", status_code=302)
