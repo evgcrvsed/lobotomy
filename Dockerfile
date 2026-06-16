@@ -7,8 +7,8 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Копируем весь код из папки app
-COPY app/ .
+# Копируем весь код из папки backend
+COPY backend/ .
 
 # Открываем порт
 EXPOSE 8000
